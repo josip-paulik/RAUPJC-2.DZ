@@ -7,16 +7,16 @@ using Models;
 
 namespace Interfaces
 {
-    interface IToDoRepository
+    interface ITodoRepository
     {
-        ToDoItem Get(Guid todoId);
+        TodoItem Get(Guid todoId);
 
         /// <summary>
         /// Adds new TodoItem object in database.
         /// If object with the same id already exists,
         /// method should throw DuplicateTodoItemException with the message "duplicate id: {id}". 
         /// </summary>
-        void Add(ToDoItem todoItem);
+        void Add(TodoItem todoItem);
 
         /// <summary>
         /// Tries to remove a TodoItem with given id from the database.
@@ -28,7 +28,7 @@ namespace Interfaces
         /// Updates given TodoItem in database.
         /// If TodoItem does not exist, method will add one.
         /// </summary>
-        void Update(ToDoItem todoItem);
+        void Update(TodoItem todoItem);
 
         /// <summary>
         /// Tries to mark a TodoItem as completed in database.
@@ -40,23 +40,23 @@ namespace Interfaces
         /// Gets all ToDoItems, sorted by date created.
         /// </summary>
         /// <returns></returns>
-        List<ToDoItem> GetAll();
+        List<TodoItem> GetAll();
 
         /// <summary>
         /// Gets all incomplete ToDoObjects in database.
         /// </summary>
         /// <returns></returns>
-        List<ToDoItem> GetActive();
+        List<TodoItem> GetActive();
 
         /// <summary>
         /// Gets all completed ToDoItem objects in database.
         /// </summary>
         /// <returns></returns>
-        List<ToDoItem> GetCompleted();
+        List<TodoItem> GetCompleted();
 
         /// <summary>
         /// Gets all ToDoItem objects in databse that apply the filter.
         /// </summary>
-        List<ToDoItem> GetFiltered(Func<ToDoItem, bool> filterFunction);
+        List<TodoItem> GetFiltered(Func<TodoItem, bool> filterFunction);
     }
 }

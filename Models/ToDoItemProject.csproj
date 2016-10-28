@@ -40,9 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IToDoRepository.cs" />
+    <Compile Include="ITodoRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ToDoItem.cs" />
+    <Compile Include="TodoItem.cs" />
+    <Compile Include="TodoItemRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

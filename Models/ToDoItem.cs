@@ -3,15 +3,16 @@ using System;
 
 namespace Models
 {
-    class ToDoItem
+    class TodoItem
     {
-        public Guid Id { get; set; }
+        public Guid Id { get; }
         public string Text { get; set; }
         public bool IsCompleted { get; set; }
         public DateTime DateCompleted { get; set; }
         public DateTime DateCreated { get; set; }
 
-        public ToDoItem(string text)
+
+        public TodoItem(string text)
         {
             Id = new Guid();
             Text = text;
