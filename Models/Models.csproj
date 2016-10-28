@@ -43,6 +43,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ToDoItem.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\PongGame\GenericList\GenericList.csproj">
+      <Project>{586e26bb-926f-4e41-96bc-81077a6bb2f5}</Project>
+      <Name>GenericList</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
