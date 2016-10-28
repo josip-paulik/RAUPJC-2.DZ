@@ -35,8 +35,11 @@ namespace Models
         /// </summary>
         /// <param name="todoItem"></param>
         public void Add(TodoItem todoItem)
-        {
-            _inMemoryToDoDatabase.Add(todoItem);
+        { 
+            if (!_inMemoryToDoDatabase.Contains(todoItem))
+            {
+                _inMemoryToDoDatabase.Add(todoItem); 
+            }
         }
 
         /// <summary>
@@ -75,7 +78,7 @@ namespace Models
         }
 
         /// <summary>
-        /// 
+        /// Marks an item inside collection as completed.
         /// </summary>
         /// <param name="todoId"></param>
         /// <returns></returns>
@@ -92,21 +95,38 @@ namespace Models
             return true;
         }
 
+        /// <summary>
+        /// Returns whole collection as a list, ordered by date created.
+        /// </summary>
+        /// <returns>Collection as a list and its elements ordered by date created.</returns>
         public List<TodoItem> GetAll()
         {
             return _inMemoryToDoDatabase.OrderBy(s => s.DateCreated).ToList();
         }
 
+        /// <summary>
+        /// Returns all items which are not marked as completed.
+        /// </summary>
+        /// <returns>All items that are not marked as completed as a list</returns>
         public List<TodoItem> GetActive()
         {
             return _inMemoryToDoDatabase.Where(t => !t.IsCompleted).ToList();
         }
 
+        /// <summary>
+        /// Returns al items which are marked as completed.
+        /// </summary>
+        /// <returns>All items that are marked as completed as a list.</returns>
         public List<TodoItem> GetCompleted()
         {
             return _inMemoryToDoDatabase.Where(t => t.IsCompleted).ToList();
         }
 
+        /// <summary>
+        /// Returns all items which satisfy given condintion(filter).
+        /// </summary>
+        /// <param name="filterFunction">Filter with which we will filter down wished data.</param>
+        /// <returns>Data that satisfies given condition(filter).</returns>
         public List<TodoItem> GetFiltered(Func<TodoItem, bool> filterFunction)
         {
             return _inMemoryToDoDatabase.Where(filterFunction).ToList();

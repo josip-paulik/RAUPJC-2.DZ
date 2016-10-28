@@ -5,7 +5,7 @@ namespace Models
 {
     class TodoItem
     {
-        public Guid Id { get; }
+        public readonly Guid Id;
         public string Text { get; set; }
         public bool IsCompleted { get; set; }
         public DateTime DateCompleted { get; set; }
