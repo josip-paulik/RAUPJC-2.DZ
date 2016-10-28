@@ -50,8 +50,19 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="DuplicateTodoItemException.cs" />
+    <Compile Include="TodoRepositoryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\PongGame\GenericList\GenericList.csproj">
+      <Project>{586e26bb-926f-4e41-96bc-81077a6bb2f5}</Project>
+      <Name>GenericList</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\TodoItemProject.csproj">
+      <Project>{08de8064-6f7c-4798-ae23-ee777e78c593}</Project>
+      <Name>TodoItemProject</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

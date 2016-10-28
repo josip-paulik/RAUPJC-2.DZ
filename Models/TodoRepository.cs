@@ -8,14 +8,14 @@ using Interfaces;
 
 namespace Models
 {
-    class TodoItemRepository : ITodoRepository
+     public class TodoRepository : ITodoRepository
     {
         /// <summary>
         /// Our in memory implementation of database.
         /// </summary>
         private readonly IGenericList<TodoItem> _inMemoryToDoDatabase;
 
-        public TodoItemRepository(IGenericList<TodoItem> initalDbState = null)
+        public TodoRepository(IGenericList<TodoItem> initalDbState = null)
         {
             _inMemoryToDoDatabase = initalDbState ?? new GenericList<TodoItem>();
         }

@@ -3,7 +3,7 @@ using System;
 
 namespace Models
 {
-    class TodoItem
+     public class TodoItem
     {
         public readonly Guid Id;
         public string Text { get; set; }

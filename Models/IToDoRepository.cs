@@ -7,7 +7,7 @@ using Models;
 
 namespace Interfaces
 {
-    interface ITodoRepository
+    public interface ITodoRepository
     {
         TodoItem Get(Guid todoId);
 
