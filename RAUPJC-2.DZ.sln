@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericList", "..\PongGame\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoRepositoryTests", "UnitTestProject1\TodoRepositoryTests.csproj", "{51624B62-9E2C-4ED3-BD8C-B02E11EFD97E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasks345", "Tasks345\Tasks345.csproj", "{AC5A3586-DEED-4356-9297-727DCB24A998}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{51624B62-9E2C-4ED3-BD8C-B02E11EFD97E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51624B62-9E2C-4ED3-BD8C-B02E11EFD97E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51624B62-9E2C-4ED3-BD8C-B02E11EFD97E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC5A3586-DEED-4356-9297-727DCB24A998}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC5A3586-DEED-4356-9297-727DCB24A998}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC5A3586-DEED-4356-9297-727DCB24A998}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC5A3586-DEED-4356-9297-727DCB24A998}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

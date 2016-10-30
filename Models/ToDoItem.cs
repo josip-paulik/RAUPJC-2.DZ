@@ -3,7 +3,10 @@ using System;
 
 namespace Models
 {
-     public class TodoItem
+    /// <summary>
+    /// This class represents some kind of activity or obligation that must be done.
+    /// </summary>
+    public class TodoItem
     {
         public readonly Guid Id;
         public string Text { get; set; }
