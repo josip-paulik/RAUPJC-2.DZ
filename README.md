@@ -16,4 +16,5 @@ Svaka se petlja izvodila na svojoj dretvi.
 #5.
 Paralelna petlja je završila za 0.6102 milisekundi, dok je obična završila za 0,0042 milisekundi.
 
-
+#Komentar
+Models file sadrži sve potrebno za TodoItem zadatke uključujući i test project
