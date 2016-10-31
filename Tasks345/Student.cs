@@ -17,16 +17,18 @@ namespace Tasks345
         public string Jmbag { get; set; }
         public Gender Gender { get; set; }
 
-        public Student(string name, string jmbag)
+        public Student(string name, string jmbag, Gender gender)
         {
-            Name = name; Jmbag = jmbag;
+            Name = name;
+            Jmbag = jmbag;
+            Gender = gender;
         }
 
         #region Overriding operators == and != between 2 students
 
         public static bool operator ==(Student s1, Student s2)
         {
-            if (s1.Name.Equals(s2.Name) && (s1.Jmbag == s2.Jmbag))
+            if (s1.Name.Equals(s2.Name) && s1.Jmbag.Equals(s2.Jmbag))
                 return true;
             else
                 return false;
@@ -34,7 +36,7 @@ namespace Tasks345
 
         public static bool operator !=(Student s1, Student s2)
         {
-            if (s1.Name.Equals(s2.Name) && (s1.Jmbag == s2.Jmbag))
+            if (s1.Name.Equals(s2.Name) && s1.Jmbag.Equals(s2.Jmbag))
                 return false;
             else
                 return true;
@@ -57,7 +59,7 @@ namespace Tasks345
 
             Student otherStudent= (Student)other;
 
-            return (this.Jmbag == otherStudent.Jmbag) && this.Name.Equals(otherStudent.Name);
+            return this.Jmbag.Equals(otherStudent.Jmbag) && this.Name.Equals(otherStudent.Name);
         }
 
         public override int GetHashCode()
